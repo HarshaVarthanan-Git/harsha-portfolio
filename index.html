@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsha Varthanan S | MERN Stack Developer</title>
+  <meta name="description" content="Harsha Varthanan S – MERN Stack Developer Portfolio. Fresher developer specializing in PHP, MySQL, and learning React.js, Node.js">
+  <meta name="keywords" content="MERN, Full Stack, React, Node, MongoDB, Portfolio, Harsha Varthanan, PHP, MySQL">
+  <meta name="author" content="Harsha Varthanan S">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Harsha Varthanan S | MERN Stack Developer">
+  <meta property="og:description" content="Fresher Software Developer passionate about web development and MERN stack">
+  <meta property="og:type" content="website">
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    
+    body {
+      background: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    .professional-gradient {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
+      animation: gradient-shift 8s ease infinite;
+      background-size: 400% 400%;
+    }
+    
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-origin: center;
+    }
+    
+    .card:hover {
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-8px) scale(1.02);
+    }
+    
+    .skill-badge {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .skill-badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .skill-badge:hover {
+      background: #3b82f6;
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    .skill-badge:hover::before {
+      left: 100%;
+    }
+    
+    .tech-icon {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    
+    .tech-icon:hover {
+      transform: scale(1.15) rotate(5deg);
+    }
+    
+    .nav-link {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: linear-gradient(90deg, #60a5fa, #3b82f6);
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .professional-button {
+      background: linear-gradient(135deg, #3b82f6, #1e40af);
+      border: none;
+      color: white;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .professional-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s;
+    }
+    
+    .professional-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px 0 rgba(59, 130, 246, 0.4);
+    }
+    
+    .professional-button:hover::before {
+      left: 100%;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: pulse-line 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-line {
+      0%, 100% { opacity: 1; width: 50px; }
+      50% { opacity: 0.7; width: 70px; }
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .typing-effect {
+      border-right: 2px solid #60a5fa;
+      animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 50% { border-color: #60a5fa; }
+      51%, 100% { border-color: transparent; }
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .project-card:hover::before {
+      opacity: 1;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    
+    .stats-card {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stats-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .stats-card:hover::after {
+      opacity: 1;
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .bounce-in {
+      animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: scale(0.3); }
+      50% { opacity: 1; transform: scale(1.05); }
+      70% { transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    
+    .progress-bar {
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 8px;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      border-radius: 10px;
+      transition: width 2s ease-in-out;
+    }
+    
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      z-index: 1000;
+      transition: width 0.3s ease;
+    }
+    
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(0);
+      animation: ripple-animation 0.6s linear;
+      pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+    
+    .form-success {
+      background: #d1fae5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+    
+    .form-error {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fca5a5;
+    }
+    
+    /* Dark mode styles */
+    .dark-mode {
+      background: #1f2937;
+      color: #f9fafb;
+    }
+    
+    .dark-mode .card {
+      background: #374151;
+      border-color: #4b5563;
+      color: #f9fafb;
+    }
+    
+    .dark-mode .skill-badge {
+      background: #4b5563;
+      color: #d1d5db;
+      border-color: #6b7280;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .card {
+        margin: 0 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+  
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 professional-gradient shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="font-bold text-xl text-white floating">Harsha Varthanan S</div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-link text-sm font-medium">About</a>
+        <a href="#skills" class="nav-link text-sm font-medium">Skills</a>
+        <a href="#projects" class="nav-link text-sm font-medium">Projects</a>
+        <a href="#stats" class="nav-link text-sm font-medium">Statistics</a>
+        <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
+      </nav>
+      <button id="darkModeToggle" class="text-white hover:text-blue-200 transition">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="professional-gradient min-h-screen flex flex-col justify-center items-center text-center px-4">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 text-white bounce-in">
+          Harsha Varthanan S
+        </h1>
+        <h2 class="text-xl md:text-2xl text-blue-100 mb-6 font-light typing-effect" data-aos="fade-up" data-aos-delay="300">
+          <span id="typedText"></span>
+        </h2>
+        
+        <p class="text-lg text-blue-50 mb-8 max-w-3xl leading-relaxed" data-aos="fade-up" data-aos-delay="600">
+          Final-year Computer Science Student at Velammal College of Engineering and Technology, Madurai. 
+          Passionate about creating efficient solutions and currently exploring modern web technologies.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="900">
+          <a href="#projects" class="professional-button px-8 py-3 rounded-lg font-semibold inline-flex items-center">
+            <i class="fas fa-briefcase mr-2"></i>View Projects
+          </a>
+          <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition inline-flex items-center border">
+            <i class="fas fa-envelope mr-2"></i>Get In Touch
+          </a>
+          <a href="/resume.pdf" download class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition inline-flex items-center">
+            <i class="fas fa-download mr-2"></i>Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 section-title" data-aos="fade-up">
+          About Me
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+              I'm a passionate Computer Science student and fresher developer with hands-on experience in PHP and MySQL. 
+              Currently expanding my skillset by exploring React and Node.js to build a strong foundation in the MERN stack.
+            </p>
+            
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="flex items-start space-x-3">
+                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-code text-blue-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1">Web Development</h3>
+                  <p class="text-sm text-gray-600">PHP, MySQL, HTML/CSS, JavaScript</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3">
+                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-seedling text-green-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1">Currently Learning</h3>
+                  <p class="text-sm text-gray-600">React.js, Node.js, MERN Stack</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3">
+                <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-database text-purple-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1">Database Design</h3>
+                  <p class="text-sm text-gray-600">MySQL, data modeling, optimization</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3">
+                <div class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-lightbulb text-yellow-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1">Problem Solving</h3>
+                  <p class="text-sm text-gray-600">Analytical thinking, continuous learning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div data-aos="fade-left">
+            <div class="bg-gray-50 rounded-2xl p-8 border stats-card">
+              <h3 class="text-2xl font-bold mb-8 text-gray-800 text-center">Journey So Far</h3>
+              <div class="grid grid-cols-2 gap-6">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-600 mb-2">Fresher</div>
+                  <div class="text-sm text-gray-600 font-medium">Ready to Start</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-green-600 mb-2">3+</div>
+                  <div class="text-sm text-gray-600 font-medium">Projects Built</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-purple-600 mb-2">8+</div>
+                  <div class="text-sm text-gray-600 font-medium">Technologies</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-red-600 mb-2">100%</div>
+                  <div class="text-sm text-gray-600 font-medium">Dedication</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 section-title" data-aos="fade-up">
+          Technical Skills
+        </h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div class="card rounded-2xl p-8" data-aos="fade-right">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center">
+              <i class="fas fa-code text-blue-600 mr-3"></i>
+              Current Technologies
+            </h3>
+            <div class="grid grid-cols-4 gap-4">
+              <div class="tech-icon text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50">
+                <i class="devicon-html5-plain text-3xl mb-2 text-orange-500"></i>
+                <p class="text-xs font-medium">HTML5</p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="tech-icon text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50">
+                <i class="devicon-css3-plain text-3xl mb-2 text-blue-500"></i>
+                <p class="text-xs font-medium">CSS3</p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="tech-icon text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50">
+                <i class="devicon-javascript-plain text-3xl mb-2 text-yellow-500"></i>
+                <p class="text-xs font-medium">JavaScript</p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="tech-icon text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50">
+                <i class="devicon-php-plain text-3xl mb-2 text-purple-500"></i>
+                <p class="text-xs font-medium">PHP</p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="tech-icon text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50">
+                <i class="devicon-mysql-plain text-3xl mb-2 text-blue-600"></i>
+                <p class="text-xs font-medium">MySQL</p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="tech-icon text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50">
+                <i class="devicon-java-plain text-3xl mb-2 text-red-600"></i>
+                <p class="text-xs font-medium">Java</p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="tech-icon text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50">
+                <i class="devicon-git-plain text-3xl mb-2 text-orange-600"></i>
+                <p class="text-xs font-medium">Git</p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="tech-icon text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50">
+                <i class="fas fa-terminal text-3xl mb-2 text-gray-600"></i>
+                <p class="text-xs font-medium">CLI</p>
+                <div class="progress-bar mt-2">
+                  <div class="progress-fill" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card rounded-2xl p-8" data-aos="fade-left">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center">
+              <i class="fas fa-seedling text-green-600 mr-3"></i>
+              Currently Exploring
+            </h3>
+            <div class="space-y-4">
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">React.js</span>
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">Express.js</span>
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">REST APIs</span>
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">JSON</span>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">Responsive Design</span>
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">UI/UX Basics</span>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">Database Design</span>
+                <span class="skill-badge px-3 py-1 rounded-full text-sm font-medium">System Architecture</span>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+              <h4 class="font-semibold text-blue-800 mb-2">Learning Progress</h4>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>React.js</span>
+                    <span>40%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 40%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Node.js</span>
+                    <span>35%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 35%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>MongoDB</span>
+                    <span>30%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 30%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 section-title" data-aos="fade-up">
+          My Projects
+        </h2>
+        
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+          <div class="card rounded-2xl p-8 project-card relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+              <i class="fas fa-file-alt text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">OD Management System</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Comprehensive role-based portal for managing On-Duty requests with multi-level approval workflow, 
+              document upload capabilities, and administrative oversight. Built with clean PHP architecture and MySQL.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
+              <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">Role-based Auth</span>
+              <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">File Upload</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/HarshaVarthanan-Git/OD-Management-System" target="_blank"
+                   class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center">
+                  <i class="fab fa-github mr-2"></i>View Code
+                </a>
+                <a href="#" class="text-green-600 hover:text-green-700 font-medium text-sm flex items-center">
+                  <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                </a>
+              </div>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Major Project</span>
+            </div>
+          </div>
+
+          <div class="card rounded-2xl p-8 project-card relative" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+              <i class="fas fa-certificate text-2xl text-green-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Certificate Management Portal</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Streamlined system for batch-wise certificate uploads with teacher dashboard, 
+              administrative filtering, and comprehensive student progress tracking. Focus on user experience and efficiency.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
+              <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">Dashboard</span>
+              <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">Batch Processing</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/HarshaVarthanan-Git/Certificate-upload-Website" target="_blank"
+                   class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center">
+                  <i class="fab fa-github mr-2"></i>View Code
+                </a>
+                <a href="#" class="text-green-600 hover:text-green-700 font-medium text-sm flex items-center">
+                  <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                </a>
+              </div>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Project</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 mb-12">
+          <div class="card rounded-2xl p-8 project-card relative" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+              <i class="fas fa-sticky-note text-2xl text-yellow-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">BATTY-NOTE</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Lightweight note-taking application built with PHP and MySQL. 
+              Features clean architecture, efficient data storage, and responsive design for seamless note management.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">PHP</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Responsive</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/HarshaVarthanan-Git/BATTY-NOTE" target="_blank"
+                   class="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center">
+                  <i class="fab fa-github mr-2"></i>View Code
+                </a>
+                <a href="#" class="text-green-600 hover:text-green-700 font-medium text-sm flex items-center">
+                  <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                </a>
+              </div>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Mini Project</span>
+            </div>
+          </div>
+
+          <div class="card rounded-2xl p-8 border-2 border-dashed border-blue-200 bg-blue-50" data-aos="fade-up" data-aos-delay="400">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-hammer text-2xl text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Prep-Connect
+                <span class="text-sm font-normal text-blue-600 ml-2">(Learning Phase)</span>
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Professional networking platform for student-mentor connections. 
+                Currently learning MERN stack to build this comprehensive solution with modern technologies.
+              </p>
+              <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium">React.js</span>
+                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+              </div>
+              <div class="text-blue-600 font-medium">
+                <i class="fas fa-graduation-cap mr-2"></i>Learning MERN Stack
+              </div>
+            </div>
+          </div>
+
+          <div class="card rounded-2xl p-8 border-2 border-dashed border-gray-200 bg-gray-50" data-aos="fade-up" data-aos-delay="500">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-plus text-2xl text-gray-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Next Project
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Excited to apply my growing MERN stack knowledge in upcoming projects. 
+                Open to collaboration and learning opportunities.
+              </p>
+              <div class="text-gray-600 font-medium">
+                <i class="fas fa-rocket mr-2"></i>Coming Soon
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-20 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 section-title" data-aos="fade-up">
+          Development Statistics
+        </h2>
+        
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+          <div class="card rounded-2xl p-6 stats-card" data-aos="fade-right">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800 text-center">GitHub Contributions</h3>
+            <div class="text-center">
+              <img src="https://github-readme-stats.vercel.app/api?username=HarshaVarthanan-Git&show_icons=true&theme=default&hide_border=true&bg_color=ffffff&title_color=1e40af&icon_color=3b82f6&text_color=374151"
+                   alt="GitHub Statistics" class="w-full rounded-lg" loading="lazy">
+            </div>
+          </div>
+          
+          <div class="card rounded-2xl p-6 stats-card" data-aos="fade-left">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800 text-center">Coding Streak</h3>
+            <div class="text-center">
+              <img src="https://github-readme-streak-stats.herokuapp.com/?user=HarshaVarthanan-Git&theme=default&hide_border=true&background=ffffff"
+                   alt="GitHub Streak" class="w-full rounded-lg" loading="lazy">
+            </div>
+          </div>
+        </div>
+        
+        <div class="card rounded-2xl p-8 stats-card" data-aos="fade-up">
+          <h3 class="text-2xl font-semibold mb-8 text-gray-800 text-center">
+            <i class="fas fa-chart-line mr-3 text-blue-600"></i>
+            Problem Solving Progress
+          </h3>
+          <div class="text-center">
+            <img src="https://leetcard.jacoblin.cool/harshavarthanan_s?theme=light&font=Roboto&ext=heatmap"
+                 alt="LeetCode Statistics" class="mx-auto rounded-lg max-w-full" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center text-gray-800 section-title" data-aos="fade-up">
+          Let's Connect
+        </h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div data-aos="fade-right">
+            <div class="card rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-8 text-gray-800">Get In Touch</h3>
+              <div class="space-y-6">
+                <a href="mailto:s.harshavarthanan1109@gmail.com"
+                   class="flex items-center space-x-4 text-gray-600 hover:text-blue-600 transition group">
+                  <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition floating">
+                    <i class="fas fa-envelope text-red-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Email</p>
+                    <p class="text-sm">s.harshavarthanan1109@gmail.com</p>
+                  </div>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/srhv/" target="_blank"
+                   class="flex items-center space-x-4 text-gray-600 hover:text-blue-600 transition group">
+                  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition floating">
+                    <i class="fab fa-linkedin text-blue-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">LinkedIn</p>
+                    <p class="text-sm">Professional Profile</p>
+                  </div>
+                </a>
+                
+                <a href="https://github.com/HarshaVarthanan-Git" target="_blank"
+                   class="flex items-center space-x-4 text-gray-600 hover:text-blue-600 transition group">
+                  <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition floating">
+                    <i class="fab fa-github text-gray-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">GitHub</p>
+                    <p class="text-sm">Code Repository</p>
+                  </div>
+                </a>
+                
+                <a href="tel:+919876543210"
+                   class="flex items-center space-x-4 text-gray-600 hover:text-blue-600 transition group">
+                  <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition floating">
+                    <i class="fas fa-phone text-green-600"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800">Phone</p>
+                    <p class="text-sm">+91 93618 41155</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div data-aos="fade-left">
+            <div class="card rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-8 text-gray-800">Send Message</h3>
+              <form action="https://formsubmit.co/s.harshavarthanan1109@gmail.com" method="POST" class="space-y-6" id="contactForm">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://your-portfolio-url.com/thank-you.html">
+                
+                <div>
+                  <input type="text" name="name" placeholder="Full Name" required
+                         class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                </div>
+                <div>
+                  <input type="email" name="email" placeholder="Email Address" required
+                         class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                </div>
+                <div>
+                  <input type="text" name="subject" placeholder="Subject"
+                         class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                </div>
+                <div>
+                  <textarea name="message" placeholder="Your Message" rows="5" required
+                            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"></textarea>
+                </div>
+                <button type="submit" class="professional-button w-full px-6 py-3 text-white font-semibold rounded-lg">
+                  <i class="fas fa-paper-plane mr-2"></i>Send Message
+                </button>
+              </form>
+              
+              <!-- Success/Error Messages -->
+              <div id="formMessage" class="mt-4 p-4 rounded-lg hidden">
+                <p id="messageText"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.linkedin.com/in/srhv/" target="_blank" class="text-gray-300 hover:text-blue-400 transition">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="https://github.com/HarshaVarthanan-Git" target="_blank" class="text-gray-300 hover:text-gray-100 transition">
+          <i class="fab fa-github text-2xl"></i>
+        </a>
+        <a href="mailto:s.harshavarthanan1109@gmail.com" class="text-gray-300 hover:text-red-400 transition">
+          <i class="fas fa-envelope text-2xl"></i>
+        </a>
+      </div>
+      <p class="text-gray-300 mb-4">
+        <strong>"Code with passion. Learn with purpose. Build with dedication."</strong>
+      </p>
+      <p class="text-sm text-gray-400">&copy; 2025 Harsha Varthanan S. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+
+    // Typing effect for hero section
+    const typedTextElement = document.getElementById('typedText');
+    const textArray = [
+      'Fresher Software Developer',
+      'Web Development Enthusiast', 
+      'PHP & MySQL Developer',
+      'Problem Solver'
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeText() {
+      const currentText = textArray[textIndex];
+      
+      if (isDeleting) {
+        typedTextElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typedTextElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 50 : 100;
+
+      if (!isDeleting && charIndex === currentText.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % textArray.length;
+        typeSpeed = 500;
+      }
+
+      setTimeout(typeText, typeSpeed);
+    }
+
+    // Start typing effect
+    setTimeout(typeText, 1000);
+
+    // Scroll progress indicator
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scrollIndicator').style.width = scrollPercent + '%';
+    });
+
+    // Active navigation link
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const icon = darkModeToggle.querySelector('i');
+      if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+      darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // Form submission handling
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    const messageText = document.getElementById('messageText');
+
+    contactForm.addEventListener('submit', function(e) {
+      const submitButton = this.querySelector('button[type="submit"]');
+      const originalText = submitButton.innerHTML;
+      
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+      submitButton.disabled = true;
+
+      // Show success message after form submission
+      setTimeout(() => {
+        formMessage.classList.remove('hidden', 'form-error');
+        formMessage.classList.add('form-success');
+        messageText.textContent = 'Thank you for your message! I\'ll get back to you soon.';
+        
+        contactForm.reset();
+        submitButton.innerHTML = originalText;
+        submitButton.disabled = false;
+
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          formMessage.classList.add('hidden');
+        }, 5000);
+      }, 1000);
+    });
+
+    // Add ripple effect to buttons
+    document.querySelectorAll('.professional-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        let ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        this.appendChild(ripple);
+
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Animate progress bars when in view
+    const progressBars = document.querySelectorAll('.progress-fill');
+    const progressObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const progressBar = entry.target;
+          const width = progressBar.style.width;
+          progressBar.style.width = '0%';
+          setTimeout(() => {
+            progressBar.style.width = width;
+          }, 200);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    progressBars.forEach(bar => {
+      progressObserver.observe(bar);
+    });
+
+    // Add intersection observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('bounce-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+      observer.observe(card);
+    });
+
+    // Add parallax effect to hero section
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.professional-gradient');
+      const rate = scrolled * -0.3;
+
+      if (hero && scrolled < window.innerHeight) {
+        hero.style.transform = `translateY(${rate}px)`;
+      }
+    });
+
+    // Lazy load images
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.src;
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => {
+      imageObserver.observe(img);
+    });
+  </script>
+</body>
+</html>
